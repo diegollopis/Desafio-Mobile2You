@@ -9,9 +9,11 @@ import SwiftUI
 
 struct MoviePosterView: View {
     
+    @EnvironmentObject var movieViewModel: MovieViewModel
+    
     var body: some View {
         
-        Image("johnny_2")
+        Image(uiImage: movieViewModel.movieInfo?.getImage() ?? UIImage())
             .resizable()
             .scaledToFill()
     }

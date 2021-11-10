@@ -8,10 +8,15 @@
 import SwiftUI
 
 @main
+
 struct desafioMoviesTMDBApp: App {
+    
+    @StateObject var movieViewModel: MovieViewModel = MovieViewModel()
+    
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(movieViewModel)
         }
     }
 }

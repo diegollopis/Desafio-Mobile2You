@@ -9,9 +9,11 @@ import SwiftUI
 
 struct TitleView: View {
     
+    let name: String
+    
     var body: some View {
         
-        Text("Johnny Depp")
+        Text(name)
             .font(.largeTitle)
             .bold()
     }
@@ -19,6 +21,6 @@ struct TitleView: View {
 
 struct TitleView_Previews: PreviewProvider {
     static var previews: some View {
-        TitleView()
+        TitleView(name: "Johnny Depp")
     }
 }
