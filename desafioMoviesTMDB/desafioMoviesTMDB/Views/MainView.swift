@@ -14,7 +14,7 @@ struct MainView: View {
     let width = getScreenWidth()
     let height = getScreenHeight()
     
-    init() {
+    init () {
         makeNavBarTransparent()
     }
     
@@ -40,14 +40,6 @@ struct MainView: View {
                             
                             MoviesListView()
                             
-                            VStack {
-                                LikeButtonView()
-                                    .padding(.bottom, 10)
-                                
-                                AddListButtonView()
-                            }
-                            .padding(.top, 40)
-                            
                             FootnoteView()
                                 .padding(.top, 20)
                         }
@@ -65,7 +57,6 @@ struct MainView: View {
 }
 
 func makeNavBarTransparent() {
-    
     UINavigationBar.appearance().barTintColor = .clear
     UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
 }
@@ -76,10 +67,4 @@ func getScreenWidth() -> CGFloat {
 
 func getScreenHeight() -> CGFloat {
     UIScreen.main.bounds.size.height
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-    }
 }
