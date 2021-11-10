@@ -9,12 +9,14 @@ import SwiftUI
 
 struct LikesView: View {
     
+    let likes: Int
+    
     var body: some View {
         
         HStack {
             Image(systemName: "heart.fill")
             
-            Text("3.5K Likes")
+            Text("\(likes)")
                 .padding(.trailing, 20)
         }
     }
@@ -22,6 +24,6 @@ struct LikesView: View {
 
 struct LikesView_Previews: PreviewProvider {
     static var previews: some View {
-        LikesView()
+        LikesView(likes: 3)
     }
 }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MainView: View {
     
+    @EnvironmentObject var movieViewModel: MovieViewModel
+        
     let width = getScreenWidth()
     let height = getScreenHeight()
     
@@ -57,6 +59,7 @@ struct MainView: View {
             .ignoresSafeArea()
             .navigationBarItems(leading: BackButtonView())
         }
+        .onAppear(perform: movieViewModel.fetchMovieData)
     }
 }
 
