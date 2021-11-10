@@ -13,7 +13,7 @@ struct MovieDetailsModel {
     let likes: Int
     let views: Double
     
-    func getImage() -> UIImage {
+    func getPoster() -> UIImage {
         
         let address = "https://image.tmdb.org/t/p/original/\(self.moviePoster)"
         
@@ -28,5 +28,17 @@ struct MovieDetailsModel {
             
         }
         return UIImage()
+    }
+    
+    func getMovieTitle() -> String {
+        self.movieTitle
+    }
+    
+    func getLikes() -> Int {
+        self.likes
+    }
+    
+    func getViews() -> Double {
+        self.views
     }
 }

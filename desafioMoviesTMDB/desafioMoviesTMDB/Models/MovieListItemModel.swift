@@ -18,7 +18,16 @@ struct MovieListItemModel: Identifiable {
     let moviePoster: String
     let genreIds: [Int]
     
-    func getImage() -> UIImage {
+    func getMovieTitle() -> String {
+        self.movieTitle
+    }
+    
+    func getReleaseDate() -> String {
+        self.releaseDate
+    
+    }
+    
+    func getPoster() -> UIImage {
         
         let address = "https://image.tmdb.org/t/p/original/\(self.moviePoster)"
         
@@ -33,5 +42,9 @@ struct MovieListItemModel: Identifiable {
             
         }
         return UIImage()
+    }
+    
+    func getGenreIds() -> [Int] {
+        self.genreIds
     }
 }

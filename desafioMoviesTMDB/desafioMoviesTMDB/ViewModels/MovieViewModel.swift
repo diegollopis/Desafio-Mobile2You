@@ -9,13 +9,9 @@ import Foundation
 
 class MovieViewModel: ObservableObject {
     
-    @Published var movieInfo: MovieDetailsModel?
+    @Published var movieInfo = MovieDetailsModel(moviePoster: "", movieTitle: "", likes: 1, views: 0.0)
     
     @Published var movieList = MovieListModel().list
-    
-    init () {
-        movieInfo = MovieDetailsModel(moviePoster: "", movieTitle: "", likes: 1, views: 0.0)
-    }
         
     func fetchMovieData() {
         
