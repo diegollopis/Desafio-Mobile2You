@@ -11,6 +11,8 @@ struct MoviesListView: View {
     
     @EnvironmentObject var movieViewModel: MovieViewModel
     
+    @State private var showingCheckmark: Bool = false
+            
     var body: some View {
         
         VStack {
@@ -32,14 +34,17 @@ struct MoviesListView: View {
                     
                     Image(systemName: "checkmark.circle.fill")
                         .padding(.bottom, 70)
+                        .opacity(showingCheckmark ? 1 : 0)
                 }
             }
+            
+            VStack {
+                LikeButtonView()
+                    .padding(.bottom, 10)
+                
+                AddListButtonView(showingCheckmark: $showingCheckmark)
+            }
+            .padding(.top, 40)
         }
-    }
-}
-
-struct MoviesListView_Previews: PreviewProvider {
-    static var previews: some View {
-        MoviesListView()
     }
 }

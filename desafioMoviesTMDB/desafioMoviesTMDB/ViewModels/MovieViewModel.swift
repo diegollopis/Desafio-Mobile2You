@@ -31,12 +31,11 @@ class MovieViewModel: ObservableObject {
                         DispatchQueue.main.async {
                             
                             self.movieInfo = MovieDetailsModel(moviePoster: r.poster_path, movieTitle: r.title, likes: r.vote_count, views: r.popularity)
-                            print("sucesso!")
                             
                             return
                         }
                     } catch {
-                        print("deu ruim!!!")
+                        print("Falha!")
                     }
                 }
             }
@@ -70,12 +69,11 @@ class MovieViewModel: ObservableObject {
                                     genreIds: r.results[i].genre_ids
                                 )
                                 self.movieList.append(movieList)
-                                print(movieList.moviePoster)
                             }
                             return
                         }
                     } catch {
-                        print("sem lista!!!")
+                        print("Lista não retornada!")
                     }
                 }
             }
