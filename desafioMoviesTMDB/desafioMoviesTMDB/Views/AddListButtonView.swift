@@ -24,7 +24,6 @@ struct AddListButtonView: View {
         .background(add ? Color.white.opacity(1) : Color.white.opacity(0))
         .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.white, lineWidth: 2))
         .cornerRadius(8)
-        .padding(.horizontal)
     }
 }
 
