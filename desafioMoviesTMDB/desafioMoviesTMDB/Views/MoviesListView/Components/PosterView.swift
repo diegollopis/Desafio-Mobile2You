@@ -9,11 +9,11 @@ import SwiftUI
 
 struct PosterView: View {
     
-    let name: String
+    let image: UIImage
     
     var body: some View {
         
-        Image(name)
+        Image(uiImage: image)
             .resizable()
             .scaledToFill()
             .frame(width: 80, height: 100, alignment: .topLeading)
@@ -21,8 +21,8 @@ struct PosterView: View {
     }
 }
 
-struct PosterView_Previews: PreviewProvider {
-    static var previews: some View {
-        PosterView(name: "edward")
-    }
-}
+//struct PosterView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PosterView(name: "edward")
+//    }
+//}
