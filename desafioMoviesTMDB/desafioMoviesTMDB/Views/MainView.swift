@@ -60,6 +60,7 @@ struct MainView: View {
             .navigationBarItems(leading: BackButtonView())
         }
         .onAppear(perform: movieViewModel.fetchMovieData)
+        .onAppear(perform: movieViewModel.fetchMoviesList)
     }
 }
 

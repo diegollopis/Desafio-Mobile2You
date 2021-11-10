@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MoviesList {
+struct MovieListModel {
     
     var list: [MovieListItemModel] = []
 }
