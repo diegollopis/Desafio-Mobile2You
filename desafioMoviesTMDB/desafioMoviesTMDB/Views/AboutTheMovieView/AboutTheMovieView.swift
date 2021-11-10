@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MovieListInfoView: View {
+struct AboutTheMovieView: View {
         
     var body: some View {
         
@@ -36,7 +36,7 @@ struct MovieListInfoView_Previews: PreviewProvider {
 
         ZStack {
             Color.black
-            MovieListInfoView()
+            AboutTheMovieView()
         }
         .foregroundColor(.white)
     }
