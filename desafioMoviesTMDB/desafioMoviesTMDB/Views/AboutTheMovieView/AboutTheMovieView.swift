@@ -13,23 +13,28 @@ struct AboutTheMovieView: View {
         
     var body: some View {
         
-        VStack (alignment: .leading, spacing: 15) {
+        ZStack {
             
-            HStack {
-                TitleView(name: movieViewModel.movieInfo?.movieTitle ?? "Peido")
+            ShadowView()
+            
+            VStack (alignment: .leading, spacing: 15) {
                 
-                Spacer()
-                
-                HeartButtonView()
+                HStack {
+                    TitleView(name: movieViewModel.movieInfo?.movieTitle ?? "Peido")
+                    
+                    Spacer()
+                    
+                    HeartButtonView()
+                }
+                    
+                HStack {
+                    LikesView(likes: movieViewModel.movieInfo?.likes ?? 0)
+                    
+                    WatchedView(watched: movieViewModel.movieInfo?.views ?? 0.0)
+                }
             }
-                
-            HStack {
-                LikesView(likes: movieViewModel.movieInfo?.likes ?? 0)
-                
-                WatchedView(watched: movieViewModel.movieInfo?.views ?? 0.0)
-            }
+            .font(.body)
         }
-        .font(.body)
     }
 }
 
