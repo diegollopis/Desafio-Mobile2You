@@ -19,7 +19,7 @@ class MovieViewModel: ObservableObject {
         
     func fetchMovieData() {
         
-        let url = "https://api.themoviedb.org/3/movie/438631?api_key=e5eb01e1a7cf82d8d5d574e34f2e58ff&language=pt-BR"
+        let url = "https://api.themoviedb.org/3/movie/24428?api_key=e5eb01e1a7cf82d8d5d574e34f2e58ff&language=pt-BR"
         
         if let urlString = URL(string: url) {
             
@@ -50,7 +50,7 @@ class MovieViewModel: ObservableObject {
     
     func fetchMoviesList() {
         
-        let movieLink = "https://api.themoviedb.org/3/movie/438631/similar?api_key=e5eb01e1a7cf82d8d5d574e34f2e58ff&language=en-US&page=1"
+        let movieLink = "https://api.themoviedb.org/3/movie/24428/similar?api_key=e5eb01e1a7cf82d8d5d574e34f2e58ff&language=en-US&page=1"
 
         if let urlString = URL(string: movieLink) {
 
