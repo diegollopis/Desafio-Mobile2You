@@ -20,7 +20,7 @@ struct AboutTheMovieView: View {
             VStack (alignment: .leading, spacing: 15) {
                 
                 HStack {
-                    TitleView(name: movieViewModel.movieInfo?.movieTitle ?? "Peido")
+                    TitleView(name: movieViewModel.movieInfo.getMovieTitle())
                     
                     Spacer()
                     
@@ -28,24 +28,12 @@ struct AboutTheMovieView: View {
                 }
                     
                 HStack {
-                    LikesView(likes: movieViewModel.movieInfo?.likes ?? 0)
+                    LikesView(likes: movieViewModel.movieInfo.getLikes())
                     
-                    WatchedView(watched: movieViewModel.movieInfo?.views ?? 0.0)
+                    WatchedView(watched: movieViewModel.movieInfo.getViews())
                 }
             }
             .font(.body)
         }
     }
 }
-
-//struct MovieListInfoView_Previews: PreviewProvider {
-//    static var previews: some View {
-//
-//        ZStack {
-//            Color.black
-//            AboutTheMovieView()
-//        }
-//        .foregroundColor(.white)
-//    }
-//}
-

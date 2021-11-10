@@ -13,7 +13,7 @@ struct MoviePosterView: View {
     
     var body: some View {
         
-        Image(uiImage: movieViewModel.movieInfo?.getImage() ?? UIImage())
+        Image(uiImage: movieViewModel.movieInfo.getPoster())
             .resizable()
             .scaledToFill()
     }

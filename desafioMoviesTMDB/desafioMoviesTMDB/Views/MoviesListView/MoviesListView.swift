@@ -18,13 +18,13 @@ struct MoviesListView: View {
             ForEach(movieViewModel.movieList) { movie in
                 
                 HStack {
-                    PosterView(image: movie.getImage())
+                    PosterView(image: movie.getPoster())
                     
                     VStack (alignment: .leading, spacing: 10) {
                         
-                        MovieTitleView(title: movie.movieTitle)
+                        MovieTitleView(title: movie.getMovieTitle())
                         
-                        ReleaseYearAndGenreView(text: movie.releaseDate)
+                        ReleaseYearAndGenreView(text: movie.getReleaseDate())
                         
                         Divider()
                             .offset(y: 25)
