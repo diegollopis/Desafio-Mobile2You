@@ -15,8 +15,9 @@ struct PosterView: View {
         
         Image(name)
             .resizable()
-            .scaledToFit()
-            .frame(width: 100, height: 100)
+            .scaledToFill()
+            .frame(width: 80, height: 100, alignment: .topLeading)
+            .clipped()
     }
 }
 

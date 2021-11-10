@@ -28,8 +28,6 @@ struct MoviesListView: View {
                             .offset(y: 25)
                     }
                     
-                    Spacer()
-                    
                     Image(systemName: "checkmark.circle.fill")
                         .padding(.bottom, 70)
                 }
