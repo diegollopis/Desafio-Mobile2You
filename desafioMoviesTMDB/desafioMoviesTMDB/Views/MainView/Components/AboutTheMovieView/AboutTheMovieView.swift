@@ -30,7 +30,7 @@ struct AboutTheMovieView: View {
                 HStack {
                     LikesView(likes: movieViewModel.movieInfo.getLikes())
                     
-                    WatchedView(watched: movieViewModel.movieInfo.getFormattedViews())
+                    WatchedView(watched: movieViewModel.movieInfo.getViews())
                 }
             }
             .font(.body)
