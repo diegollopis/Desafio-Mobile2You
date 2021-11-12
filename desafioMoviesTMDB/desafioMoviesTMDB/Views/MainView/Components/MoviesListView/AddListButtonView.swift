@@ -10,14 +10,11 @@ import SwiftUI
 struct AddListButtonView: View {
     
     @State private var add: Bool = false
-    
-    @Binding var showingCheckmark: Bool
         
     var body: some View {
     
         Button {
             self.add = true
-            self.showingCheckmark = true
         } label: {
                 Text(add ? "Adicionado às Minhas Listas" : "Adicionar às Minhas Listas")
                     .frame(maxWidth: .infinity)
