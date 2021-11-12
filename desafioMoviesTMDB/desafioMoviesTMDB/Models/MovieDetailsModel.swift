@@ -38,7 +38,7 @@ struct MovieDetailsModel {
         self.likes / 1000
     }
     
-    func getFormattedViews() -> Double {
+    func getViews() -> Double {
         self.views
     }
 }

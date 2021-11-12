@@ -23,8 +23,7 @@ struct MovieListItemModel: Identifiable {
     }
     
     func getReleaseDate() -> String {
-        self.releaseDate
-    
+        String(self.releaseDate.prefix(4))
     }
     
     func getPoster() -> UIImage {
