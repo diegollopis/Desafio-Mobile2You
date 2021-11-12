@@ -45,6 +45,7 @@ struct MainView: View {
                             
                             FootnoteView()
                                 .padding(.top, 20)
+                                .padding(.bottom, 20)
                         }
                         .padding(.horizontal, 15)
                     }

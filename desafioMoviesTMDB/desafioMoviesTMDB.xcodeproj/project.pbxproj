@@ -212,11 +212,11 @@
 		13FFC3F1273BE93300CBA4E2 /* MoviesListView */ = {
 			isa = PBXGroup;
 			children = (
+				13FFC3F2273BE95E00CBA4E2 /* MoviesListView.swift */,
 				13FFC3F8273BEFC900CBA4E2 /* Components */,
 				134E51D8273B0E0900F1212A /* LikeButtonView.swift */,
 				134E51DA273B106800F1212A /* AddListButtonView.swift */,
 				132D3AED273B50C600E7E492 /* BackButtonView.swift */,
-				13FFC3F2273BE95E00CBA4E2 /* MoviesListView.swift */,
 			);
 			path = MoviesListView;
 			sourceTree = "<group>";
