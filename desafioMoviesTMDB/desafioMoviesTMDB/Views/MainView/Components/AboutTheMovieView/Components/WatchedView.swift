@@ -20,9 +20,3 @@ struct WatchedView: View {
         }
     }
 }
-
-struct WatchedView_Previews: PreviewProvider {
-    static var previews: some View {
-        WatchedView(watched: 3435.9)
-    }
-}

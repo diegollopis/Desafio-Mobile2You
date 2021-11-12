@@ -15,13 +15,3 @@ struct FootnoteView: View {
             .font(.subheadline)
     }
 }
-
-struct FootnoteView_Previews: PreviewProvider {
-    static var previews: some View {
-        ZStack {
-            Color.black
-            FootnoteView()
-        }
-        .foregroundColor(.white)
-    }
-}

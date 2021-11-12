@@ -21,9 +21,3 @@ struct LikesView: View {
         }
     }
 }
-
-struct LikesView_Previews: PreviewProvider {
-    static var previews: some View {
-        LikesView(likes: 3)
-    }
-}

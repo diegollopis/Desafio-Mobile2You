@@ -16,9 +16,3 @@ struct ShadowView: View {
             .shadow(color: .black.opacity(1), radius: 3, x: 0, y: -5)
     }
 }
-
-struct ShadowView_Previews: PreviewProvider {
-    static var previews: some View {
-        ShadowView()
-    }
-}
