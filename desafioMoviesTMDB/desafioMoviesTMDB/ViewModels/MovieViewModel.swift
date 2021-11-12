@@ -32,7 +32,7 @@ class MovieViewModel: ObservableObject {
                         
                         DispatchQueue.main.async {
                             
-                            self.movieInfo = MovieDetailsModel(moviePoster: r.poster_path, movieTitle: r.title, likes: r.vote_count, views: r.popularity)
+                            self.movieInfo = MovieDetailsModel(moviePoster: r.poster_path, movieTitle: r.title, likes: Double(r.vote_count), views: r.popularity)
                             
                             return
                         }

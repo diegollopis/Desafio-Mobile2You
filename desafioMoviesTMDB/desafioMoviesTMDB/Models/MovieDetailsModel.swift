@@ -10,7 +10,7 @@ struct MovieDetailsModel {
     
     let moviePoster: String
     let movieTitle: String
-    let likes: Int
+    let likes: Double
     let views: Double
     
     func getPoster() -> UIImage {
@@ -34,11 +34,11 @@ struct MovieDetailsModel {
         self.movieTitle
     }
     
-    func getLikes() -> Int {
-        self.likes
+    func getLikes() -> Double {
+        self.likes / 1000
     }
     
-    func getViews() -> Double {
+    func getFormattedViews() -> Double {
         self.views
     }
 }
