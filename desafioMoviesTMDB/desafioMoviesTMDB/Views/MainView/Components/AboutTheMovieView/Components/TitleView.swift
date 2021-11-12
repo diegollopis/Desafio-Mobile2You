@@ -18,9 +18,3 @@ struct TitleView: View {
             .bold()
     }
 }
-
-struct TitleView_Previews: PreviewProvider {
-    static var previews: some View {
-        TitleView(name: "Johnny Depp")
-    }
-}

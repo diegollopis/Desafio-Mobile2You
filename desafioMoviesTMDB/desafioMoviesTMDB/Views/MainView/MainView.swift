@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     
     @EnvironmentObject var movieViewModel: MovieViewModel
-        
+    
     let width = getScreenWidth()
     let height = getScreenHeight()
     
@@ -30,6 +30,9 @@ struct MainView: View {
                     
                     VStack (spacing: 20){
                         
+                        ProgressViewScreen()
+                            .progressViewStyle(CircularProgressViewStyle())
+                        
                         MoviePosterView()
                             .frame(width: width, height: height * 0.4)
                             .frame(maxHeight: height * 0.4)
@@ -47,9 +50,13 @@ struct MainView: View {
                     }
                 }
                 .foregroundColor(.white)
+                
+                if movieViewModel.isShowingProgressView {
+                    ProgressViewScreen()
+                }
             }
             .ignoresSafeArea()
-            .navigationBarItems(leading: BackButtonView())
+            .navigationBarItems(leading: BackButtonView().opacity(movieViewModel.isShowingProgressView ? 0 : 1))
         }
         .onAppear(perform: movieViewModel.fetchMovieData)
         .onAppear(perform: movieViewModel.fetchMoviesList)

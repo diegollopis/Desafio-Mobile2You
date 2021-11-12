@@ -12,6 +12,8 @@ class MovieViewModel: ObservableObject {
     @Published var movieInfo = MovieDetailsModel(moviePoster: "", movieTitle: "", likes: 1, views: 0.0)
     
     @Published var movieList = MovieListModel().list
+    
+    @Published var isShowingProgressView: Bool = true
         
     func fetchMovieData() {
         
@@ -70,6 +72,7 @@ class MovieViewModel: ObservableObject {
                                 )
                                 self.movieList.append(movieList)
                             }
+                            self.isShowingProgressView = false
                             return
                         }
                     } catch {
