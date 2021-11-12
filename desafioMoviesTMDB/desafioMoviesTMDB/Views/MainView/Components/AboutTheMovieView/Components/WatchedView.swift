@@ -16,7 +16,7 @@ struct WatchedView: View {
         HStack {
             Image(systemName: "circle.bottomhalf.filled")
         
-            Text("\(watched)")
+            Text("\(watched, specifier: "%.1f")M views")
         }
     }
 }
