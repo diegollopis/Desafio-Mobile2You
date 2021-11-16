@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LikesView: View {
+struct LikesValue: View {
     
     let likes: Double
         

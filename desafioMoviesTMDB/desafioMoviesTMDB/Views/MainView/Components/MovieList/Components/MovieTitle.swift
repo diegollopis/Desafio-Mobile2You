@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MovieTitleView: View {
+struct MovieTitle: View {
     
     let title: String
     
@@ -15,11 +15,5 @@ struct MovieTitleView: View {
         
         Text(title)
             .bold()
-    }
-}
-
-struct MovieTitleView_Previews: PreviewProvider {
-    static var previews: some View {
-        MovieTitleView(title: "Edward Scissorhands")
     }
 }

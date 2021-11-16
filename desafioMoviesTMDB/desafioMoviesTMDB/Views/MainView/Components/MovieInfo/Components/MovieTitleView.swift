@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TitleView: View {
+struct MovieTitleView: View {
     
     let name: String
     

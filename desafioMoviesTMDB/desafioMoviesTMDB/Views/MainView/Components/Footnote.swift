@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FootnoteView: View {
+struct Footnote: View {
     
     var body: some View {
         

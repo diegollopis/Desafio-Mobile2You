@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PosterView: View {
+struct MoviePoster: View {
     
     let image: UIImage
     

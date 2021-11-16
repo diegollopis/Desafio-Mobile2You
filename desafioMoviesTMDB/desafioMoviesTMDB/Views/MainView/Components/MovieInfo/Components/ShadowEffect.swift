@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ShadowView: View {
+struct ShadowEffect: View {
     
     var body: some View {
         

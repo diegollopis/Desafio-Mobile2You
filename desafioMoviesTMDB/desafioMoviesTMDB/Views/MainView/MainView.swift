@@ -33,22 +33,23 @@ struct MainView: View {
                         ProgressViewScreen()
                             .progressViewStyle(CircularProgressViewStyle())
                         
-                        MoviePosterView()
+                        MainPoster()
                             .frame(width: width, height: height * 0.4)
                             .frame(maxHeight: height * 0.4)
                         
                         VStack {
-                            AboutTheMovieView()
+                            MovieInfo()
                                 .padding(.bottom, 20)
                             
-                            MoviesListView()
+                            MoviesList()
                             
-                            FootnoteView()
+                            Footnote()
                                 .padding(.top, 20)
                                 .padding(.bottom, 20)
                         }
                         .padding(.horizontal, 15)
                     }
+                    .onAppear(perform: movieViewModel.fetchAppData)
                 }
                 .foregroundColor(.white)
                 
@@ -59,8 +60,6 @@ struct MainView: View {
             .ignoresSafeArea()
             .navigationBarItems(leading: BackButtonView().opacity(movieViewModel.isShowingProgressView ? 0 : 1))
         }
-        .onAppear(perform: movieViewModel.fetchMovieData)
-        .onAppear(perform: movieViewModel.fetchMoviesList)
     }
 }
 

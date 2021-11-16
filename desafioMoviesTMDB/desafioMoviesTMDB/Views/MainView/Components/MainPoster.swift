@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct MoviePosterView: View {
+struct MainPoster: View {
     
     @EnvironmentObject var movieViewModel: MovieViewModel
     
     var body: some View {
         
-        Image(uiImage: movieViewModel.movieInfo.getPoster())
+        Image(uiImage: movieViewModel.movie?.getPoster() ?? UIImage())
             .resizable()
             .scaledToFill()
     }

@@ -1,17 +1,22 @@
 //
-//  MovieDetailsModel.swift
+//  MovieListModel.swift
 //  desafioMoviesTMDB
 //
 //  Created by Diego Llopis on 10/11/21.
+//
+
+import Foundation
 
 import UIKit
 
-struct MovieDetailsModel {
+struct MovieListItem: Identifiable {
     
-    let moviePoster: String
+    var id = UUID()
+    
     let movieTitle: String
-    let likes: Double
-    let views: Double
+    let releaseDate: String
+    let moviePoster: String
+    let genreIds: [Int]
     
     func getPoster() -> UIImage {
         
@@ -28,17 +33,5 @@ struct MovieDetailsModel {
             
         }
         return UIImage()
-    }
-    
-    func getMovieTitle() -> String {
-        self.movieTitle
-    }
-    
-    func getLikes() -> Double {
-        self.likes / 1000
-    }
-    
-    func getFormattedViews() -> Double {
-        self.views
     }
 }
