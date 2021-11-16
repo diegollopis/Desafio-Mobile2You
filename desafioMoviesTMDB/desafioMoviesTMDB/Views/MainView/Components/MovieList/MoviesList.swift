@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MoviesListView: View {
+struct MoviesList: View {
     
     @EnvironmentObject var movieViewModel: MovieViewModel
                 
@@ -18,13 +18,13 @@ struct MoviesListView: View {
             ForEach(movieViewModel.movieList) { movie in
                 
                 HStack {
-                    PosterView(image: movie.getPoster())
+                    MoviePoster(image: movie.getPoster())
                     
                     VStack (alignment: .leading, spacing: 10) {
                         
-                        MovieTitleView(title: movie.getMovieTitle())
+                        MovieTitle(title: movie.movieTitle)
                         
-                        ReleaseYearAndGenreView(text: movie.getReleaseDate())
+                        ReleaseYearAndGenre(text: String(movie.releaseDate.prefix(4)))
                         
                         Divider()
                             .offset(y: 25)

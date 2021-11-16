@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WatchedView: View {
+struct WatchedValue: View {
     
     let watched: Double
     

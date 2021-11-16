@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ReleaseYearAndGenreView: View {
+struct ReleaseYearAndGenre: View {
     
     let text: String
     
@@ -15,10 +15,4 @@ struct ReleaseYearAndGenreView: View {
         
         Text(text)
             .font(.subheadline)    }
-}
-
-struct ReleaseYearAndGenreView_Previews: PreviewProvider {
-    static var previews: some View {
-        ReleaseYearAndGenreView(text: "1994, Drama")
-    }
 }

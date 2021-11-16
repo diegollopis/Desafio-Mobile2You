@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HeartButtonView: View {
+struct HeartButton: View {
     
     @State private var isLiked: Bool = false
     

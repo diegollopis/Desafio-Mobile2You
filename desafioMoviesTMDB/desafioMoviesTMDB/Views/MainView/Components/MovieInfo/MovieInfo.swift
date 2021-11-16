@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AboutTheMovieView: View {
+struct MovieInfo: View {
     
     @EnvironmentObject var movieViewModel: MovieViewModel
         
@@ -15,22 +15,22 @@ struct AboutTheMovieView: View {
         
         ZStack {
             
-            ShadowView()
+            ShadowEffect()
             
             VStack (alignment: .leading, spacing: 15) {
                 
                 HStack {
-                    TitleView(name: movieViewModel.movieInfo.getMovieTitle())
+                    MovieTitleView(name: movieViewModel.movie?.title ?? "Unknown")
                     
                     Spacer()
                     
-                    HeartButtonView()
+                    HeartButton()
                 }
                     
                 HStack {
-                    LikesView(likes: movieViewModel.movieInfo.getLikes())
+                    LikesValue(likes: movieViewModel.movie?.getLikes() ?? 0.0)
                     
-                    WatchedView(watched: movieViewModel.movieInfo.getViews())
+                    WatchedValue(watched: movieViewModel.movie?.popularity ?? 0.0)
                 }
             }
             .font(.body)
