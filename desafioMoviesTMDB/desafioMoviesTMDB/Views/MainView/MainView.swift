@@ -64,7 +64,7 @@ struct MainView: View {
 }
 
 func makeNavBarTransparent() {
-    UINavigationBar.appearance().barTintColor = .black
+    UINavigationBar.appearance().barTintColor = .yellow
     UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
 }
 
